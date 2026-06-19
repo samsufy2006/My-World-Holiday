@@ -11,7 +11,7 @@ function Navbar() {
 
         {/* ✅ LOGO IMAGE FROM PUBLIC FOLDER */}
         <div className="logo">
-          <img src="/images/logo1.jpeg" alt="MWH Logo" />
+          <img src="/images/logo6.svg" alt="MWH Logo" />
         </div>
 
         <ul className="nav-links">
