@@ -2,9 +2,41 @@ import React from "react";
 import "./Contact.css";
 
 function Contact() {
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Thank you! We will contact you soon.");
+
+    const name = e.target[0].value;
+    const email = e.target[1].value;
+    const phone = e.target[2].value;
+    const destination = e.target[3].value;
+    const travelers = e.target[4].value;
+    const budget = e.target[5].value;
+    const message = e.target[6].value;
+
+    const date = new Date().toLocaleString();
+
+    const whatsappMessage = `
+📩 New Travel Enquiry
+
+👤 Name: ${name}
+📧 Email: ${email}
+📞 Phone: ${phone}
+🌍 Destination: ${destination}
+👥 Travelers: ${travelers}
+💰 Budget: ${budget}
+📝 Message: ${message}
+📅 Date: ${date}
+`;
+
+    const phoneNumber = "919717131xxx"; // 👉 Replace with your WhatsApp number
+
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(url, "_blank");
+
+    // optional reset form
+    e.target.reset();
   };
 
   return (

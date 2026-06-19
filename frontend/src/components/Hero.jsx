@@ -4,8 +4,8 @@ import "./Hero.css";
 const images = [
   "/images/hero1.jpg",
   "/images/hero2.jpg",
-  "/images/hero3.jpg",
-  "/images/hero4.jpg",
+  "/images/hero5.jpeg",
+  "/images/hero6.jpeg",
 ];
 
 function Hero() {
@@ -14,7 +14,7 @@ function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
-    }, 4000); // Change image every 4 seconds
+    }, 4000);
 
     return () => clearInterval(interval);
   }, []);
@@ -23,46 +23,47 @@ function Hero() {
     const packagesSection = document.getElementById("packages");
 
     if (packagesSection) {
-      packagesSection.scrollIntoView({
-        behavior: "smooth",
-      });
+      packagesSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
   return (
-    <section className="hero" id="home">
-      {/* Carousel Image */}
-      <img
-        src={images[current]}
-        alt="Travel Destination"
-        className="hero-image"
-      />
+    <>
+      {/* HERO SECTION */}
+      <section className="hero" id="home">
+        <img
+          src={images[current]}
+          alt="Travel Destination"
+          className="hero-image"
+        />
 
-      {/* Hero Content */}
-      <div className="hero-overlay">
-        
+        <div className="hero-overlay">
+          <h1>Create Memories </h1>
+          <h1>    That Last Forever</h1>
+          <p>Dream. Discover. Experience.</p>
 
-        <h1>Create The Memories That Last Forever</h1>
+          <button className="hero-btn" onClick={goToPackages}>
+            Discover Packages
+          </button>
+        </div>
 
-        <p>Dream. Discover. Experience.</p>
+        {/* dots */}
+        <div className="dots">
+          {images.map((_, index) => (
+            <span
+              key={index}
+              className={current === index ? "dot active" : "dot"}
+              onClick={() => setCurrent(index)}
+            />
+          ))}
+        </div>
+      </section>
 
-        <button className="hero-btn" onClick={goToPackages}>
-          Discover Packages
-        </button>
-        
+      {/* 👉 IMAGE BELOW CAROUSEL */}
+      <div className="hero-bottom-image">
+        <img src="/images/hero-bottom.jpeg" alt="hero bottom" />
       </div>
-
-      {/* Dots */}
-      <div className="dots">
-        {images.map((_, index) => (
-          <span
-            key={index}
-            className={current === index ? "dot active" : "dot"}
-            onClick={() => setCurrent(index)}
-          />
-        ))}
-      </div>
-    </section>
+    </>
   );
 }
 

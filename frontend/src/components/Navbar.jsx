@@ -8,7 +8,11 @@ function Navbar() {
   return (
     <>
       <nav className="navbar">
-        <div className="logo">MWH</div>
+
+        {/* ✅ LOGO IMAGE FROM PUBLIC FOLDER */}
+        <div className="logo">
+          <img src="/images/logo1.jpeg" alt="MWH Logo" />
+        </div>
 
         <ul className="nav-links">
           <li><a href="#home">Home</a></li>
@@ -23,7 +27,6 @@ function Navbar() {
             >
               Enquiry
             </button>
-            
           </li>
         </ul>
       </nav>
