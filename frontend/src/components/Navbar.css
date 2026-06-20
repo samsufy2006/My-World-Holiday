@@ -1,9 +1,12 @@
+/* ================= NAVBAR ================= */
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    padding: 20px 50px;
+    height: 80px;              /* Navbar height */
+    padding: 0 50px;           /* No top/bottom padding */
     background-color: #080808;
 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -11,19 +14,22 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+
+    overflow: visible;
 }
 
-/* ✅ LOGO CONTAINER */
+/* ================= LOGO ================= */
+
 .logo {
     display: flex;
     align-items: center;
     cursor: pointer;
 }
 
-/* ✅ LOGO IMAGE STYLING */
 .logo img {
-    height: 100px;
+    height: 100px;             /* Keep logo at 100px */
     width: auto;
+    display: block;            /* Removes extra image spacing */
     object-fit: contain;
 
     transition: transform 0.3s ease;
@@ -33,13 +39,21 @@
     transform: scale(1.05);
 }
 
+/* ================= NAV LINKS ================= */
+
 .nav-links {
     display: flex;
+    align-items: center;
     list-style: none;
-    gap: 30px;
 
+    gap: 30px;
     margin: 0;
     padding: 0;
+}
+
+.nav-links li {
+    display: flex;
+    align-items: center;
 }
 
 .nav-links li a {

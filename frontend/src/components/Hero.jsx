@@ -2,10 +2,15 @@ import React, { useEffect, useState } from "react";
 import "./Hero.css";
 
 const images = [
-  "/images/hero1.jpg",
-  "/images/hero2.jpg",
-  "/images/hero5.jpeg",
-  "/images/hero6.jpeg",
+  "/images/img1.png",
+  "/images/img2.png",
+  "/images/img3.png",
+  "/images/img4.png",
+  "/images/img5.png",
+  "/images/img6.png",
+  "/images/img7.png",
+  "/images/img8.png"
+  
 ];
 
 function Hero() {
@@ -38,8 +43,7 @@ function Hero() {
         />
 
         <div className="hero-overlay">
-          <h1>Create Memories </h1>
-          <h1>    That Last Forever</h1>
+          <h1>Creating Memories That Lasts Forever</h1>
           <p>Dream. Discover. Experience.</p>
 
           <button className="hero-btn" onClick={goToPackages}>

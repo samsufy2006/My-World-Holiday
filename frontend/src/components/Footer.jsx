@@ -28,7 +28,7 @@ function Footer() {
         {/* Contact Info */}
         <div className="footer-section">
           <h3>Contact</h3>
-          <p>Email: support@myworldholidays.com</p>
+          <p>Email: hello@myworldholidays.com</p>
           <p>Phone: +91 98765 43210</p>
           <p>Location: India</p>
         </div>
