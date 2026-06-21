@@ -15,12 +15,12 @@ function Navbar() {
         </div>
 
         <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#destination">Destination</a></li>
-          <li><a href="#packages">Packages</a></li>
+          <li> <Link to="/">Home</Link></li>
+          {/* <li><a href="#destination">Destination</a></li>
+          <li><a href="#packages">Packages</a></li> */}
           <li>
-    <Link to="/about">About Us</Link>
-  </li>
+            <Link to="/about">About Us</Link>
+          </li>
 
           <li>
             <button
