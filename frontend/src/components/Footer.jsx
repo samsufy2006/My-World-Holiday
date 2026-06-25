@@ -12,7 +12,11 @@ function Footer() {
 
         <div className="footer-section">
 
-          <h2 className="footer-logo">My World Holidays</h2>
+          <h2 className="footer-logo">
+            <h2>
+  My World Holidays<sup>™</sup>
+</h2>
+          </h2>
 
           <p>
             Your trusted travel partner for unforgettable domestic and

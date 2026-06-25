@@ -10,9 +10,9 @@ function Navbar() {
       <nav className="navbar">
 
         {/* ✅ LOGO IMAGE FROM PUBLIC FOLDER */}
-        <div className="logo">
+        <Link to="/" className="logo">
           <img src="/images/logo.png" alt="MWH Logo" />
-        </div>
+        </Link>
 
         <ul className="nav-links">
           <li> <Link to="/">Home</Link></li>

@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
+import ScrollToTop from "./components/ScrollToTop";
 
 // Main Pages
 import HomePage from "./Pages/HomePage";
@@ -18,17 +19,19 @@ import BookingTerms from "./Pages/BookingTerms";
 import Disclaimer from "./Pages/Disclaimer";
 
 // Uncomment after creating these pages
-// import Contact from "./Pages/Contact";
 // import FAQ from "./Pages/FAQ";
 
 function App() {
   return (
     <BrowserRouter>
+      {/* Scroll to top on every route change */}
+      <ScrollToTop />
 
+      {/* Navbar */}
       <Navbar />
 
+      {/* Routes */}
       <Routes>
-
         {/* Home */}
         <Route path="/" element={<HomePage />} />
 
@@ -61,16 +64,18 @@ function App() {
           element={<Disclaimer />}
         />
 
-        
-        <Route path="/contact" element={<Contact />} />
+        {/* Contact */}
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
 
         {/* Uncomment after creating FAQ page */}
         {/* <Route path="/faq" element={<FAQ />} /> */}
-
       </Routes>
 
+      {/* Footer */}
       <Footer />
-
     </BrowserRouter>
   );
 }

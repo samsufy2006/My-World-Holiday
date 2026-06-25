@@ -1,21 +1,23 @@
 /* ================= NAVBAR ================= */
 
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    height: 80px;              /* Navbar height */
-    padding: 0 50px;           /* No top/bottom padding */
+    height: 80px;
+    padding: 0 50px;
+
     background-color: #080808;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-    position: sticky;
-    top: 0;
     z-index: 1000;
-
-    overflow: visible;
+    box-sizing: border-box;
 }
 
 /* ================= LOGO ================= */
@@ -23,15 +25,15 @@
 .logo {
     display: flex;
     align-items: center;
+    text-decoration: none;
     cursor: pointer;
 }
 
 .logo img {
-    height: 100px;             /* Keep logo at 100px */
+    height: 70px;
     width: auto;
-    display: block;            /* Removes extra image spacing */
+    display: block;
     object-fit: contain;
-
     transition: transform 0.3s ease;
 }
 
@@ -61,10 +63,59 @@
     color: #d4a373;
     font-size: 16px;
     font-weight: 500;
-
     transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-    color: #0077ff;
+    color: #ffffff;
+}
+
+/* ================= ENQUIRY BUTTON ================= */
+
+.enquiry-btn {
+    background-color: #d4a373;
+    color: #ffffff;
+
+    border: none;
+    outline: none;
+
+    padding: 10px 22px;
+    border-radius: 6px;
+
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.enquiry-btn:hover {
+    background-color: #b8865d;
+    transform: translateY(-2px);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 20px;
+        height: 70px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links li a {
+        font-size: 14px;
+    }
+
+    .enquiry-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
